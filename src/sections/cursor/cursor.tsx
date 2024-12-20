@@ -4,8 +4,8 @@ import { useCursorContext } from '@/components/ui/customcursor'; // Adjust the p
 
 function Cursor() {
   const { initialCursorVariant, animateCursorVariant, animateCursor } = useCursorContext();
-  const cursorX = useMotionValue();
-  const cursorY = useMotionValue();
+  const cursorX = useMotionValue(0);
+  const cursorY = useMotionValue(0);
 
   const variants = {
     cursorEnter: {
