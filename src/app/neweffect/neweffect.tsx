@@ -5,12 +5,15 @@ import { motion } from "framer-motion";
 import Aboveheader from "@/sections/aboveheader/aboveheader";
 import Hero from "@/sections/hero/hero";
 import Secondsection from "../secondsection/secondsection";
-import Lastsection from "@/sections/lastsection/lastsection";
 import { MotionStyle } from "framer-motion";
+import { CSSProperties } from "react";
+
 
 const fullscreen: MotionStyle = {
   position: "absolute",
   inset: "0px", // Ensure the unit is explicitly set
+  accentColor: "initial", // Example of a valid value
+
 };
 
 export default function Neweffect() {
@@ -29,7 +32,7 @@ export default function Neweffect() {
         <div
           onMouseMove={handleMouseMove}
           style={{
-            ...fullscreen,
+            ...(fullscreen as CSSProperties),
             backgroundColor: "black",
             display: "flex",
             alignItems: "center",
