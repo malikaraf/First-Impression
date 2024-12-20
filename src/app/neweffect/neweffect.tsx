@@ -6,8 +6,12 @@ import Aboveheader from "@/sections/aboveheader/aboveheader";
 import Hero from "@/sections/hero/hero";
 import Secondsection from "../secondsection/secondsection";
 import Lastsection from "@/sections/lastsection/lastsection";
+import { MotionStyle } from "framer-motion";
 
-const fullscreen = { position: "fixed", inset: 0 };
+const fullscreen: MotionStyle = {
+  position: "absolute",
+  inset: "0px", // Ensure the unit is explicitly set
+};
 
 export default function Neweffect() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -19,7 +23,8 @@ export default function Neweffect() {
   };
 
   return (
-    <motion.div layout style={isLoaded ? {} : fullscreen}>
+    <motion.div layout style={isLoaded ? {} : fullscreen as MotionStyle}>
+
       {!isLoaded && (
         <div
           onMouseMove={handleMouseMove}
