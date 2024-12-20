@@ -2,11 +2,7 @@
 
 import React from "react";
 import { Box } from "@mui/material";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+
 import { useState } from "react";
 
 const Aboveheader = () => {
@@ -44,7 +40,7 @@ const Aboveheader = () => {
         />
       </div>
       <div>
-        <p>no, this isn't any sort of portfolio</p>
+        <p>no, this isn&apos;t any sort of portfolio</p>
         <Box
           component="hr"
           sx={{

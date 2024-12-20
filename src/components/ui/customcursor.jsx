@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const CursorContext = createContext();
 
 export const CursorProvider = ({ children }) => {
-  const [initialCursorVariant, setInitialCursorVariant] = useState("cursorLeave");
+  const [initialCursorVariant, ] = useState("cursorLeave");
   const [animateCursorVariant, setAnimateCursorVariant] = useState("cursorLeave");
 
   const animateCursor = (variant) => setAnimateCursorVariant(variant);

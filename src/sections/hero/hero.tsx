@@ -41,7 +41,7 @@ const Hero = () => {
     }, 3000); // Change image every 3 seconds
 
     return () => clearInterval(interval); // Clear the interval on component unmount
-  }, []);
+  }, [images.length]);
 
   return (
     <div>

@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 const Secondsection = () => {
   return (
@@ -33,7 +32,8 @@ const Secondsection = () => {
               animation: "fadeIn 2s ease-in forwards",
             }}
           >
-            Unfinished but that's the point
+            Unfinished but that&apos;s the point
+
           </p>
         </div>
   

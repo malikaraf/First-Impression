@@ -1,8 +1,5 @@
 import React from 'react';
-import { ReactFlow, Background } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import {  Page,  } from 'framework7-react';
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import 'swiper/css';
@@ -10,16 +7,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-const initialNodes = [
-  { id: '1', data: { label: 'Idk' }, position: { x: 100, y: 100 } },
-  { id: '2', data: { label: 'Idk' }, position: { x: 100, y: 200 } },
-  { id: '3', data: { label: 'Idk' }, position: { x: 100, y: 300 } },
-];
-
-const initialEdges = [
-  { id: 'e1-2', source: '1', target: '2' },
-  { id: 'e2-3', source: '2', target: '3' },
-];
 
 const Lastsection = () => (
   <div style={{ height: '100vh', backgroundColor: 'white', display: 'flex', flexDirection:'row'}}>
