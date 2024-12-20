@@ -8,8 +8,8 @@ import { useState } from "react";
 const Aboveheader = () => {
   const [text, setText] = useState("So then");
   const [text2, setText2] = useState("What is this");
-  const [text3, setText3] = useState("It's an attempt")
-  const [text4, setText4] = useState("At telling a story")
+  const [text3, ] = useState("It's an attempt")
+  const [text4, ] = useState("At telling a story")
 
   return (
     <div
