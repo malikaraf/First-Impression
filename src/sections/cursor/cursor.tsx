@@ -45,13 +45,18 @@ function Cursor() {
     const mouseLeaveHandler = () => {
       animateCursor('cursorLeave');
     };
-    window.addEventListener('mousemove', mouseMoveHandler);
-    app.addEventListener('mouseenter', mouseEnterHandler);
-    app.addEventListener('mouseleave', mouseLeaveHandler);
+    if (app) { // Null check
+      app.addEventListener('mouseenter', mouseEnterHandler);
+      app.addEventListener('mouseleave', mouseLeaveHandler);
+    }
+  
     return () => {
       window.removeEventListener('mousemove', mouseMoveHandler);
-      app.removeEventListener('mouseenter', mouseEnterHandler);
-      app.removeEventListener('mouseleave', mouseLeaveHandler);
+  
+      if (app) { // Null check for cleanup
+        app.removeEventListener('mouseenter', mouseEnterHandler);
+        app.removeEventListener('mouseleave', mouseLeaveHandler);
+      }
     };
   }, [animateCursor, cursorX, cursorY]);
 
