@@ -35,7 +35,7 @@ function Cursor() {
 
   useEffect(() => {
     const app = document.querySelector('#app');
-    const mouseMoveHandler = (e) => {
+    const mouseMoveHandler = (e:MouseEvent) => {
       cursorX.set(e.clientX - 12);
       cursorY.set(e.clientY - 12);
     };
