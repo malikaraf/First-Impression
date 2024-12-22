@@ -136,13 +136,15 @@ const Header = () => {
         sx={{ display: { md: "none" } }} // Only show on small screens
       >
         <Box sx={{ width: 250, padding: 2 }}>
-          <List>
-            {Object.keys(sections).map((section) => (
-              <ListItem button key={section} onClick={toggleMobileMenu}>
-                <ListItemText primary={section} />
-              </ListItem>
-            ))}
-          </List>
+        <List>
+  {Object.keys(sections).map((section) => (
+    <ListItem key={section}>
+      <Button onClick={toggleMobileMenu} fullWidth>
+        <ListItemText primary={section} />
+      </Button>
+    </ListItem>
+  ))}
+</List>
         </Box>
       </Drawer>
     </AppBar>
