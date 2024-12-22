@@ -18,8 +18,8 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 
 const Header = () => {
-  const [anchorEl, setAnchorEl] = useState(null);
-  const [hoveredSection, setHoveredSection] = useState(null);
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
+  const [hoveredSection, setHoveredSection] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const sections = {
@@ -29,7 +29,7 @@ const Header = () => {
     Prices: "Check out our competitive Prices here.",
   };
 
-  const handlePopoverOpen = (event, section) => {
+  const handlePopoverOpen = (event: React.MouseEvent<HTMLElement>, section: string) => {
     setAnchorEl(event.currentTarget);
     setHoveredSection(section);
   };
@@ -118,6 +118,7 @@ const Header = () => {
             backgroundColor: "white",
           }}
         >
+          
           <Typography
             sx={{ fontFamily: "'Roboto Mono', sans-serif" }}
             variant="body1"
