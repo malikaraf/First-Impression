@@ -123,8 +123,8 @@ const Header = () => {
             sx={{ fontFamily: "'Roboto Mono', sans-serif" }}
             variant="body1"
           >
-            {sections[hoveredSection]}
-          </Typography>
+  {sections[hoveredSection as keyof typeof sections] || "No Section Selected"}
+  </Typography>
         </Paper>
       </Popper>
 
